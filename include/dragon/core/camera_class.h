@@ -5,7 +5,7 @@
 
 namespace Dragon {
 
-    class Camera: public PhoenixObject{
+    class Camera: public DragonObject{
     public:
         Vector2i output_size_;
         Vector2f inv_output_size_;

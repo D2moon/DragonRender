@@ -25,7 +25,7 @@ namespace Dragon{
     };
 
 
-    class PhoenixObject {
+    class DragonObject {
     public:
         enum class PClassType {
             PCamera,
@@ -39,25 +39,22 @@ namespace Dragon{
             PBSDF
         };
 
-        virtual void AddChild(shared_ptr<PhoenixObject> child) {}
-        virtual void SetParent(shared_ptr<PhoenixObject> parent) {}
+        virtual void AddChild(shared_ptr<DragonObject> child) {}
+        virtual void SetParent(shared_ptr<DragonObject> parent) {}
         virtual void Active() {}
 
         [[nodiscard]] virtual PClassType GetClassType() const = 0;
-
-        virtual string ToString() const = 0;
-
     };
 
 
     class PhoenixObjectFactory {
     public:
-        typedef std::function<shared_ptr<PhoenixObject>(const PropertyList&)> Constructor;
+        typedef std::function<shared_ptr<DragonObject>(const PropertyList&)> Constructor;
 
         static void MRegisterClass(const std::string& name, const Constructor& constr);
 
-        static shared_ptr<PhoenixObject> CreateInstance(const std::string& name,
-                                                        const PropertyList& propList) {
+        static shared_ptr<DragonObject> CreateInstance(const std::string& name,
+                                                       const PropertyList& propList) {
             //            if (!m_constructors || m_constructors->find(name) == m_constructors->end())
             //                throw NoriException("A constructor for class \"%s\" could not be found!", name);
             return (*constructors_)[name](propList);

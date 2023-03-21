@@ -20,7 +20,6 @@ namespace Dragon{
 
             ray = Ray(orig,dir);
         }
-        [[nodiscard]] string ToString() const override{return "pinhole camera";}
     };
 
     PHOENIX_REGISTER_CLASS(PinholeCamera,"pinhole");

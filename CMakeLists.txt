@@ -18,7 +18,9 @@ find_package(spdlog CONFIG REQUIRED)
 file(GLOB dragon_src
         src/dragon/*.cpp
         src/dragon/core/*.cpp
-        src/dragon/cameras/*.cpp)
+        src/dragon/cameras/*.cpp
+        src/dragon/shapes/*.cpp
+        )
 
 add_executable(dragon ${dragon_src})
 

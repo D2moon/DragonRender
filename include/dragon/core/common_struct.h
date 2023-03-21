@@ -9,6 +9,8 @@
 #include "common.h"
 
 namespace Dragon{
+    class Shape;
+
     struct TracerHit {
         bool is_hit;
         float t_far;
@@ -31,6 +33,11 @@ namespace Dragon{
         Vector3f At(float t) const {
             return orig + dir * t;
         }
+    };
+
+    struct Interaction {
+        TracerHit basic;
+        shared_ptr<Shape> shape;
     };
 }
 #endif //DRAGON_COMMON_STRUCT_H
