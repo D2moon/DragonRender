@@ -39,5 +39,11 @@ namespace Dragon{
         TracerHit basic;
         shared_ptr<Shape> shape;
     };
+
+    struct PositionSampleRecord {
+        Vector3f point;
+        Normal3f normal;
+        float pdf;
+    };
 }
 #endif //DRAGON_COMMON_STRUCT_H

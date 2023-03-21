@@ -13,6 +13,7 @@ namespace Dragon{
     public:
         PClassType GetClassType() const override {return PClassType::PShape;}
         virtual vector<uint> AddToTracer(Tracer &tracer) = 0;
+        virtual void SamplePosition(PositionSampleRecord &pos, Vector2f sample) = 0;
     };
 }
 #endif //DRAGON_SHAPE_CLASS_H
