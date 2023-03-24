@@ -20,6 +20,9 @@ file(GLOB dragon_src
         src/dragon/cameras/*.cpp
         src/dragon/shapes/*.cpp
         src/dragon/emitters/*.cpp
+        src/dragon/bsdfs/*.cpp
+        src/dragon/samplers/*.cpp
+        src/dragon/integrators/*.cpp
         )
 
 add_executable(dragon ${dragon_src})

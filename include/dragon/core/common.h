@@ -41,4 +41,30 @@ inline float Clamp(float value, float min, float max) {
     else return value;
 }
 
+
+inline float Fresnel(float cosThetaI, float extIOR, float intIOR) {
+    float etaI = extIOR, etaT = intIOR;
+
+    if (extIOR == intIOR)
+        return 0.0f;
+    if (cosThetaI < 0.0f) {
+        std::swap(etaI, etaT);
+        cosThetaI = -cosThetaI;
+    }
+    float eta = etaI / etaT,
+            sinThetaTSqr = eta * eta * (1 - cosThetaI * cosThetaI);
+
+    if (sinThetaTSqr > 1.0f)
+        return 1.0f;
+
+    float cosThetaT = std::sqrt(1.0f - sinThetaTSqr);
+
+    float Rs = (etaI * cosThetaI - etaT * cosThetaT)
+               / (etaI * cosThetaI + etaT * cosThetaT);
+    float Rp = (etaT * cosThetaI - etaI * cosThetaT)
+               / (etaT * cosThetaI + etaI * cosThetaT);
+
+    return (Rs * Rs + Rp * Rp) / 2.0f;
+}
+
 #endif //DRAGON_COMMON_H

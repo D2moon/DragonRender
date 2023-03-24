@@ -10,7 +10,6 @@ namespace Dragon {
         virtual float Next1D() = 0;
 
         virtual Vector2f Next2D() = 0;
-        virtual shared_ptr<Sampler> Clone()=0;
 
         PClassType GetClassType() const final { return PClassType::PSampler; }
 

@@ -1,6 +1,6 @@
 #include "dragon/core/emitter_class.h"
 #include "dragon/core/shape_class.h"
-#include "dragon/core/scene.h"
+#include "dragon/core/scene_class.h"
 
 namespace Dragon {
     class AreaEmitter : public Emitter {
@@ -18,8 +18,8 @@ namespace Dragon {
 
         [[nodiscard]] Color3f Eval(const EmitterQueryRecord &rec) const override {
             float v = rec.n.dot(rec.wi);
-            if (v <= 0.f)
-                return {0, 0, 0};
+//            if (v <= 0.f)
+//                return {0, 0, 0};
             return radiance_;
         }
 
