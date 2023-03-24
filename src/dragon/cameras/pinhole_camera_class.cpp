@@ -7,8 +7,8 @@ namespace Dragon{
         {
             int width = properties.Get<int>("width").value_or(800);
             int height = properties.Get<int>("height").value_or(800);
-            output_size_ = {width,height};
-            inv_output_size_ = {1.f/width,1.f/height};
+            output_size_ = Vector2i{width,height};
+            inv_output_size_ = Vector2f {1.f/width,1.f/height};
         }
         void GenerateRay(const Vector2f sample,Ray& ray)override{
 

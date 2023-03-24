@@ -28,11 +28,11 @@ int main()
     list1.Set("height", height);
     auto camera1 = std::dynamic_pointer_cast<Camera>(PhoenixObjectFactory::CreateInstance("pinhole", list1));
 
-    PropertyList list2;
-    list2.Set("center", vector<float>{0, 0, -5});
-    list2.Set("radius", 2.f);
-    auto sphere1 = std::dynamic_pointer_cast<Shape>(PhoenixObjectFactory::CreateInstance("sphere", list2));
-    scene.AddShape(sphere1);
+//    PropertyList list2;
+//    list2.Set("center", vector<float>{0, 0, -5});
+//    list2.Set("radius", 2.f);
+//    auto sphere1 = std::dynamic_pointer_cast<Shape>(PhoenixObjectFactory::CreateInstance("sphere", list2));
+//    scene.AddShape(sphere1);
 
     PropertyList list3;
     list3.Set("center", vector<float>{1, 1, -5});

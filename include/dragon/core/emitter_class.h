@@ -26,16 +26,16 @@ namespace Dragon{
 
         EmitterQueryRecord(const Vector3f &re) : ref(re) {}
     };
-
+    class Scene;
     class Emitter : public DragonObject{
     public:
-        PClassType GetClassType() {return PClassType::PEmitter;}
+        PClassType GetClassType() const override {return PClassType::PEmitter;}
 
         [[nodiscard]] virtual Color3f Eval(const EmitterQueryRecord &record) const = 0;
 
         virtual Color3f Sample(EmitterQueryRecord &rec, Vector2f sample) const = 0;
 
-        virtual void AddToScene()
+        virtual void AddToScene(Scene& scene) = 0;
     };
 }
 #endif //DRAGON_EMITTER_H

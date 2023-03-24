@@ -43,7 +43,7 @@ namespace Dragon {
         void AddToScene(Scene &scene) override {
             auto ids = shape_->AddToTracer(scene.tracer());
             std::for_each(ids.begin(), ids.end(), [&](const auto &item) {
-                scene.SetDict(item, shared_ptr<Emitter>(this));
+                scene.SetEmitterDict(item, shared_ptr<Emitter>(this));
             });
         }
     };

@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.24)
 project(dragon)
 
 set(CMAKE_CXX_STANDARD 17)
-set(embree_DIR D:/Personal/embree/lib/cmake/embree-3.13.5)
 
 include_directories(include)
 
@@ -36,8 +35,8 @@ target_link_libraries(dragon PRIVATE
         spdlog::spdlog_header_only)
 
 file(GLOB dlls ${EMBREE_ROOT_DIR}/bin/*.dll)
-add_custom_command(TARGET dragon POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        ${dlls}
-        $<TARGET_FILE_DIR:dragon>)
+#add_custom_command(TARGET dragon POST_BUILD
+#        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+#        ${dlls}
+#        $<TARGET_FILE_DIR:dragon>)
 
