@@ -47,7 +47,7 @@ namespace Dragon{
     };
 
 
-    class PhoenixObjectFactory {
+    class DragonObjectFactory {
     public:
         typedef std::function<shared_ptr<DragonObject>(const PropertyList&)> Constructor;
 
@@ -71,7 +71,7 @@ namespace Dragon{
     } \
     static struct cls ##_{ \
         cls ##_() { \
-            PhoenixObjectFactory::MRegisterClass(name, cls ##_create); \
+            DragonObjectFactory::MRegisterClass(name, cls ##_create); \
         } \
     } cls ##__PHOENIX_;\
 

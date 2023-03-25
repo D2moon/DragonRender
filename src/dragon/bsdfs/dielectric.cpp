@@ -50,8 +50,8 @@ namespace Dragon {
         float int_ior_, ext_ior_;
     public:
         explicit Dielectric(PropertyList propers) {
-            int_ior_ = propers.Get<float>("intIOR").value_or(1.f);
-            ext_ior_ = propers.Get<float>("extIOR").value_or(1.5f);
+            int_ior_ = propers.Get<float>("intIOR").value_or(1.5f);
+            ext_ior_ = propers.Get<float>("extIOR").value_or(1.f);
 
 
             base_color_ = Color3f(1,1,1);

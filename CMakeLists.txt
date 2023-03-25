@@ -10,7 +10,7 @@ find_package(ZLIB REQUIRED)
 find_package(embree 3 CONFIG REQUIRED)
 find_package(TBB CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
-
+find_package(assimp)
 
 
 
@@ -35,7 +35,8 @@ target_link_libraries(dragon PRIVATE
         TBB::tbbmalloc
         TBB::tbbmalloc_proxy
         spdlog::spdlog
-        spdlog::spdlog_header_only)
+        spdlog::spdlog_header_only
+        assimp::assimp)
 
 file(GLOB dlls ${EMBREE_ROOT_DIR}/bin/*.dll)
 #add_custom_command(TARGET dragon POST_BUILD

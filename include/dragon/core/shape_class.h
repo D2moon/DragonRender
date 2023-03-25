@@ -14,6 +14,8 @@ namespace Dragon{
     private:
         shared_ptr<Bsdf> bsdf_;
     public:
+        float area_;
+        float inv_area_;
         PClassType GetClassType() const override {return PClassType::PShape;}
         virtual shared_ptr<Bsdf> bsdf() { return bsdf_; }
         virtual vector<uint> AddToTracer(Tracer &tracer) = 0;

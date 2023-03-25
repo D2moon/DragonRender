@@ -14,9 +14,12 @@ namespace Dragon {
 
         Color3f Li(shared_ptr<Scene> scene, shared_ptr<Sampler> sampler, const Ray &ray) const override {
             auto hit = scene->Trace(ray);
+
             Color3f res(0, 0, 0);
             if (!hit.basic.is_hit)
-                return {0.2, 0.2, 0.2};
+                return {0, 0, 0};
+//            else
+//                return {1,1,1};
             if (hit.hit_type == HitType::Emitter) {
                 EmitterQueryRecord rec(ray.orig, hit.basic.point, hit.basic.normal);
                 return hit.emitter->Eval(rec);
