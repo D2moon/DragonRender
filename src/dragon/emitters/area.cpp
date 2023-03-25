@@ -6,7 +6,6 @@ namespace Dragon {
     class AreaEmitter : public Emitter {
     private:
         shared_ptr<Shape> shape_;
-        Color3f radiance_;
     public:
         explicit AreaEmitter(PropertyList properties) {
             radiance_ = properties.Get<vector<float>>("radiance").value_or(vector<float>{1, 1, 1});
@@ -48,5 +47,5 @@ namespace Dragon {
         }
     };
 
-    PHOENIX_REGISTER_CLASS(AreaEmitter, "area");
+    DRAGON_REGISTER_CLASS(AreaEmitter, "area");
 }

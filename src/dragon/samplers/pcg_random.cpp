@@ -27,7 +27,7 @@ namespace Dragon {
 
     };
 
-    PHOENIX_REGISTER_CLASS(PcgRandom, "pcg_random");
+    DRAGON_REGISTER_CLASS(PcgRandom, "pcg_random");
 
 }
 

@@ -29,6 +29,9 @@ namespace Dragon{
     class Scene;
     class Emitter : public DragonObject{
     public:
+
+        Color3f radiance_;
+
         PClassType GetClassType() const override {return PClassType::PEmitter;}
 
         [[nodiscard]] virtual Color3f Eval(const EmitterQueryRecord &record) const = 0;

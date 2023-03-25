@@ -41,6 +41,6 @@ namespace Dragon {
         }
     };
 
-    PHOENIX_REGISTER_CLASS(Base, "base");
+    DRAGON_REGISTER_CLASS(Base, "base");
 
 }

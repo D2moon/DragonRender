@@ -58,5 +58,5 @@ namespace Dragon {
 
     };
 
-    PHOENIX_REGISTER_CLASS(ObjShape, "obj");
+    DRAGON_REGISTER_CLASS(ObjShape, "obj");
 }

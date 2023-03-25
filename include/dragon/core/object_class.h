@@ -65,7 +65,7 @@ namespace Dragon{
         static std::map<std::string, Constructor>* constructors_;
     };
 
-#define PHOENIX_REGISTER_CLASS(cls, name) \
+#define DRAGON_REGISTER_CLASS(cls, name) \
     shared_ptr<cls> cls ##_create(const PropertyList &list) { \
         return std::make_shared<cls>(list); \
     } \

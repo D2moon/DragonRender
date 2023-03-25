@@ -11,6 +11,7 @@ find_package(embree 3 CONFIG REQUIRED)
 find_package(TBB CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(assimp)
+find_package(OpenImageDenoise)
 
 
 
@@ -36,7 +37,8 @@ target_link_libraries(dragon PRIVATE
         TBB::tbbmalloc_proxy
         spdlog::spdlog
         spdlog::spdlog_header_only
-        assimp::assimp)
+        assimp::assimp
+        OpenImageDenoise)
 
 file(GLOB dlls ${EMBREE_ROOT_DIR}/bin/*.dll)
 #add_custom_command(TARGET dragon POST_BUILD

@@ -41,5 +41,5 @@ namespace Dragon {
 
     };
 
-    PHOENIX_REGISTER_CLASS(Diffuse, "diffuse");
+    DRAGON_REGISTER_CLASS(Diffuse, "diffuse");
 }

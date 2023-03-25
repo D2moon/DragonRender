@@ -181,6 +181,6 @@ namespace Dragon {
 
     };
 
-    PHOENIX_REGISTER_CLASS(Dielectric, "dielectric");
+    DRAGON_REGISTER_CLASS(Dielectric, "dielectric");
 
 }

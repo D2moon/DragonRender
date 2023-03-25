@@ -82,5 +82,5 @@ namespace Dragon {
 
     };
 
-    PHOENIX_REGISTER_CLASS(PinholeCamera, "pinhole");
+    DRAGON_REGISTER_CLASS(PinholeCamera, "pinhole");
 }

@@ -8,7 +8,7 @@
 namespace Dragon {
 
     void Bitmap::SetColor(uint x, uint y, Color3f color) {
-        this->coeffRef(x, y) = color;
+        this->coeffRef(height()-y, x) = color;
     }
 
     Color3f Bitmap::GetColor(uint x, uint y) const {

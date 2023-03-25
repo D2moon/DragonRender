@@ -30,5 +30,5 @@ namespace Dragon{
         }
     };
 
-    PHOENIX_REGISTER_CLASS(Sphere,"sphere");
+    DRAGON_REGISTER_CLASS(Sphere, "sphere");
 }
